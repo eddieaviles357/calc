@@ -10,7 +10,3 @@ def calculate(operation):
     a = int(request.args.get('a', 5))
     b = int(request.args.get('b', 5))
     return f'<h1>{a} {operation} {b} = {oprtns[operation](a,b)}</h1>'
-    # return str(add(a, b))
-    # return str(sub(a, b))
-    # return str(div(a, b))
-    # return str(mult(a, b))
