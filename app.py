@@ -6,6 +6,7 @@ app = Flask(__name__)
 
 @app.route("/add")
 def addition():
+    """Add a and b parameters."""
     a = int(request.args.get('a', 5))
     b = int(request.args.get('b', 5))
     return str(add(a, b))
@@ -13,6 +14,7 @@ def addition():
 
 @app.route("/sub")
 def subtraction():
+    """substract a and b parameters."""
     a = int(request.args.get('a', 5))
     b = int(request.args.get('b', 5))
     return str(sub(a, b))
@@ -20,6 +22,7 @@ def subtraction():
 
 @app.route("/div")
 def division():
+    """Divide a and b parameters."""
     a = int(request.args.get('a', 5))
     b = int(request.args.get('b', 5))
     return str(div(a, b))
@@ -27,6 +30,7 @@ def division():
 
 @app.route("/mult")
 def multiplication():
+    """Multiply a and b parameters."""
     a = int(request.args.get('a', 5))
     b = int(request.args.get('b', 5))
     return str(mult(a, b))
@@ -34,6 +38,7 @@ def multiplication():
 
 @app.route("/math/<operation>")
 def calculate(operation):
+    """Add,mult,div,sub a and b parameters."""
     oprtns = {'add': add, 'sub': sub, 'mult': mult, 'div': div}
     a = int(request.args.get('a', 5))
     b = int(request.args.get('b', 5))
