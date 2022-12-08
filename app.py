@@ -39,7 +39,7 @@ def multiplication():
 @app.route("/math/<operation>")
 def calculate(operation):
     """Add,mult,div,sub a and b parameters."""
-    oprtns = {'add': add, 'sub': sub, 'mult': mult, 'div': div}
+    operators = {'add': add, 'sub': sub, 'mult': mult, 'div': div}
     a = int(request.args.get('a', 5))
     b = int(request.args.get('b', 5))
-    return f'<h1>{a} {operation} {b} = {oprtns[operation](a,b)}</h1>'
+    return f'<h1>{a} {operation} {b} = {operators[operation](a,b)}</h1>'
